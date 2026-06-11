@@ -63,6 +63,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         "og:url":         "https://clickdigim.com/contact",
         "twitter:card":   "summary_large_image",
         "twitter:title":  "Contact Us — ClickDigim"
+    },
+    "schema": {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "ClickDigim",
+        "description": "Premium digital marketing and event services",
+        "url": "https://clickdigim.com",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "url": "https://clickdigim.com/contact"
+        }
     }
 }
 </script>

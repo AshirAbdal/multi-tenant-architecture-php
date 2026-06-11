@@ -11,6 +11,9 @@
     <?php foreach ($pageMeta['property'] ?? [] as $k => $v): ?>
     <meta property="<?= htmlspecialchars($k, ENT_QUOTES) ?>" content="<?= htmlspecialchars($v, ENT_QUOTES) ?>">
     <?php endforeach ?>
+    <?php if (!empty($pageMeta['schema'])): ?>
+    <script type="application/ld+json"><?= json_encode($pageMeta['schema']) ?></script>
+    <?php endif; ?>
     <style>
         body { font-family: sans-serif; background: #f4f6f9; color: #333; min-height: 100vh; margin: 0; }
         nav { background: #0066cc; padding: 0 32px; display: flex; align-items: center; height: 56px; }

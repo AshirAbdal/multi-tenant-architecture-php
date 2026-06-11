@@ -11,6 +11,9 @@
     <?php foreach ($pageMeta['property'] ?? [] as $k => $v): ?>
     <meta property="<?= htmlspecialchars($k, ENT_QUOTES) ?>" content="<?= htmlspecialchars($v, ENT_QUOTES) ?>">
     <?php endforeach ?>
+    <?php if (!empty($pageMeta['schema'])): ?>
+    <script type="application/ld+json"><?= json_encode($pageMeta['schema']) ?></script>
+    <?php endif; ?>
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="/spa.js" defer></script>
 </head>

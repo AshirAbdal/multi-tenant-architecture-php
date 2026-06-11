@@ -40,6 +40,18 @@
             el.setAttribute('content', meta.property[key]);
         });
     }
+
+    // Update schema.org structured data
+    if (meta.schema) {
+        var existingSchema = document.querySelector('script[type="application/ld+json"]');
+        if (existingSchema) {
+            existingSchema.remove();
+        }
+        var schemaEl = document.createElement('script');
+        schemaEl.setAttribute('type', 'application/ld+json');
+        schemaEl.textContent = JSON.stringify(meta.schema);
+        document.head.appendChild(schemaEl);
+    }
 }
 
     // ── Highlight the active nav link ─────────────────────────────

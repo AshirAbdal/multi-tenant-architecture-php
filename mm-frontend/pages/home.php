@@ -65,6 +65,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         "og:url":         "https://majesticmarquees.com/contact",
         "twitter:card":   "summary_large_image",
         "twitter:title":  "Contact Us — Majestic Marquees"
+    },
+    "schema": {
+        "@context": "https://schema.org",
+        "@type": "LocalBusiness",
+        "name": "Majestic Marquees",
+        "description": "Premium marquee hire services for weddings and events in the UK",
+        "url": "https://majesticmarquees.com",
+        "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Service",
+            "url": "https://majesticmarquees.com/contact"
+        }
     }
 }
 </script>
